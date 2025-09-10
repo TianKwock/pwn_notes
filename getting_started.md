@@ -39,5 +39,17 @@ If the first character in the brackets is a '!' or '^' (in newer versions of bas
 
 Prepending a variable name with '$' will let you print out its value using ``` echo ```
 
+VAR=VALUE or VAL="VALUE 123" to set variables. ``` export VAR ``` to export the variable, else other commands won't inherit variables
 
+``` env ``` will print out all exported variables set in shell 
+
+Command substitution format is VAR=$(command)
+
+``` read VAR ``` reads input into a variable
+
+``` read VAR < file ``` will read the file and store the contents in the variable
+
+#### Data Manipulation
+
+ 
 
