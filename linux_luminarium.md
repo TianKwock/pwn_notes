@@ -1,13 +1,13 @@
 
 # Linux Luminarium
 
-#### Globbing
+### Globbing
 
 '*' is a wildcard, and '?' is a wildcard but only for one character, and '[]' is a limited form of '?' in which it will match specified characters within the brackets. 
 
 If the first character in the brackets is a '!' or '^' (in newer versions of bash), it is an exclusionary glob.
 
-#### Piping
+### Piping
 
 '>' to redirect output, '>>' to append output
 
@@ -33,7 +33,7 @@ If the first character in the brackets is a '!' or '^' (in newer versions of bas
 
 ``` mkfifo ``` is to create a FIFO, which is a persiting pipe.
 
-#### Variables 
+### Variables 
 
 Prepending a variable name with '$' will let you print out its value using ``` echo ```
 
@@ -47,7 +47,7 @@ Command substitution format is VAR=$(command)
 
 ``` read VAR < file ``` will read the file and store the contents in the variable
 
-#### Data Manipulation
+### Data Manipulation
 
  
 
