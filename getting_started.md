@@ -1,7 +1,5 @@
 
-# pwn college notes 
-
-## Linux Luminarium
+# Linux Luminarium
 
 #### Globbing
 
