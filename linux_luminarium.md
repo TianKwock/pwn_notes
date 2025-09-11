@@ -49,5 +49,22 @@ Command substitution format is VAR=$(command)
 
 ### Data Manipulation
 
+``` tr ``` will translate the character(s) provided in the first argument to the character(s) provided in the second arguemnt
+
+- Example showing how to swap case of all characters: ``` tr [:upper:][:lower:] [:lower:][:upper:] ```
+
+- ``` tr -d ``` can be used to delete characters 
+
+- ``` tr -d "\n" ``` can be used to delete newlines
+
+- ``` head -n 2 ``` will display first 2 lines of its input
+
+- ``` cut -d " " -f 2 file.txt ``` will extract the second column, using a space as a delimiter, from file.txt
+
+- ``` sort ``` orders lines from input/files alphabetically by default 
+
+### Processes and Jobs 
+
+
  
 
