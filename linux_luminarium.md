@@ -65,6 +65,20 @@ Command substitution format is VAR=$(command)
 
 ### Processes and Jobs 
 
+``` ps ``` lists processes running in terminal 
+
+``` ps aux ``` will list processes for all users, processes that aren't running in terminal, and in a user-readable output
+
+``` kill [pid] ``` will terminate the process 
+
+crtl+c interrupts processes, crtl+z suspends them, and ```fg``` resumes them in the foreground, ```bg``` resumes them in the background 
+
+``` [command] & ``` will start a backgrounded process 
+
+The '?' variable has the exit code of the most recently-terminated command, and can be read by running ``` echo $? ```
+
+### Untangling Users
+
 
  
 
