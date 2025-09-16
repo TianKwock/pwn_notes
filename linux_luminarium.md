@@ -79,6 +79,27 @@ The '?' variable has the exit code of the most recently-terminated command, and 
 
 ### Untangling Users
 
+When you input a password into ```su```, it hashes it and compares it to the value in /etc/shadow 
+
+### Perceiving Permissions
+
+```chown [new owner] [file]``` will change the owner of the file
+
+```chgrp``` will change group. Requires write access to file and membership in new group to do without root 
+
+```chmod [options] mode file``` to change file permissions
+
+- format is who+/-what, for example ug+wx is to add write and execute privs for user and group
+
+- doing ```u=rw```, for example, will simply set these permissions and overwrite the old ones
+
+- you can chain chmod modes with ',', for example ```chmod u=rw,g=r file.txt```
+
+- ```chmod u+s [program]``` will set SUID bit (you must be owner)
+
+### Chaining Commands
+
+
 
  
 
