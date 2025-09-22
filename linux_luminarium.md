@@ -115,6 +115,28 @@ Scripts can access arguments using special variables '$1', '$2', etc.
 
 ### Terminal Multiplexing
 
+```screen``` creates virtual terminals
+
+- ```Ctrl-A, then d``` will detach, ```screen -r``` will reattach
+
+- ```screen -ls``` lists sessions, can attach to a specific one by giving name or PID as argument to ```screen -r```
+
+- screen keyboard shortcuts: ```Crtl-A c``` creates a new window, ```Crtl-A n``` next window, ```Crtl-A p``` previous window, ```Crtl-A 0 through Ctrl-A 9``` to jump directly to a window number, ```Ctrl-A "``` to bring up a selection menu of windows
+
+```tmux``` is like screen but with Ctrl-B instead
+
+- ```tmux ls``` to list sessions, ```tmux attach or tmux a``` to reattach
+
+- Shortcuts are same as screen aside from window picker, ```Ctrl-B w```
+
+### Pondering PATH
+
+PATH is a special shell variable that stores directory paths for the shell to search for programs corresponding to ocmmands
+
+To launch a program using its bare name, add the directory to PATH
+
+```which [command]``` will reveal command location
+
 
 
  
