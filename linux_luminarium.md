@@ -99,6 +99,22 @@ When you input a password into ```su```, it hashes it and compares it to the val
 
 ### Chaining Commands
 
+Easy way to chain commands is with a ';'
+
+```command1 && command2``` runs command2 only if command1 exits with code 0 (succeeds)
+
+```command1 || command2``` means to run command1, and if it fails, run command2
+
+Scripts are treated as commands, therefore you can redirect its input and output
+
+If a program file starts with '#!' (shebang), Linux treats the file as an interpreted program, and the contents of the rest of the line as the path to the interpreter
+
+Common shebangs: #!/bin/bash, #!/usr/bin/python3, #!/bin/sh 
+
+Scripts can access arguments using special variables '$1', '$2', etc.
+
+### Terminal Multiplexing
+
 
 
  
