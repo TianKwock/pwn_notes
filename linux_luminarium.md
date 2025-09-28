@@ -137,6 +137,23 @@ To launch a program using its bare name, add the directory to PATH
 
 ```which [command]``` will reveal command location
 
+### Silly Shenanigans
+
+.bashrc is a startup script that is a common target
+
+If a directory is world-writable, you can remove files and create another one with the same name and your own content to essentially write to the file without having write access to the file
+
+A symbolic link can be used in a world writable directory to link a file to a user's bashrc to try and get them to run a dangerous command
+
+Processes can leak information, especially through command invocations
+
+.bashrc is world-readable by default, and there may be sensitive information on there to snoop on
+
+### Daring Destruction
+
+Basic fork bomb: " :() { :|:& }; : " 
+
+Disk space can be filled with junk to make the workspace unusable
 
 
  
