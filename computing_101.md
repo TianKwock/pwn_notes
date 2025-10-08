@@ -24,4 +24,29 @@ To tell ```ld``` where program execution should begin, add ```.global _start``` 
 
 ### Software Introspection
 
- 
+Syscall tracer ```strace``` uses the Linux OS to introspect and record every system call that the program invokes
+
+- Syntax is ```system_call(parameter, parameter, ...)``` 
+
+- The ```execve``` system call starts a new program
+
+- ```alarm``` system call will set a timer in the OS, and terminate the program when that many seconds pass
+
+GDB (GNU Debugger) is used to hunt down and understand bugs 
+
+### Computer Memory
+
+Accessing memory example: ```mov rdi, [31337]```, stores value stored at address 31337 in rdi
+
+Example: if ```rax``` holds a memory address, it is a pointer. To dereference the pointer, we can do ```mov rdi, [rax]```, which will tell the CPU to use the value in ```rax``` as a memory address to dereference, and not just as a value
+
+Offset example: ```mov rax, [rdi+1]```
+
+### Hello Hackers
+
+```write``` syscall is 1
+
+```write``` first parameter is file descriptor in ```rdi```, second is memory address in ```rsi```, third is number of characters to write in ```rdx``` 
+
+
+
