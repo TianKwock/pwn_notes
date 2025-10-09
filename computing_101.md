@@ -66,11 +66,17 @@ Offset example: ```mov rax, [rdi+1]```
 
 Registers in x86_64 are 64 bits in size, ```eax``` accesses lower 32 bits of ```rax```, ```ax``` accesses lower 16 bits, ```al``` accesses lower 8 bits, ```ah``` is upper 8 bits of the ```ax``` register 
 
+- Example: ```mov al, [address]``` moves least significant byte from address to ```rax```, and ```mov ax``` moves least significant word 
+
 If you do ```x % y```, and 'y' is a power of 2 (2^n), the result will be in the lower 'n' bits of 'x' <-- much more efficient than using ```div``` for modulo
 
 ```shl reg1, reg2``` shifts reg1 left by the amount in reg2, ```shr reg1, reg2``` works similarly but to the right
 
 - reg2 can be replaced by a constant, but note that it will be in bits
+
+```and reg1, reg2``` will AND each bit pair one by one, saving the result in ```reg1```, same goes for ```or``` and ```xor```
+
+Declaring operand size example: ```add qword ptr [0x404000], 0x1337```
 
 
 
