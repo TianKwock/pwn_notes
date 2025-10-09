@@ -54,5 +54,27 @@ Offset example: ```mov rax, [rdi+1]```
 
 ### Assembly Crash Course 
 
+```add reg1, reg2``` means reg1 += reg2 ; ```sub reg1, reg2``` means reg1 -= reg2 ; ```imul reg1, reg2``` means reg1 *= reg2
+
+- ```mul``` is unsigned multiply, ```imul``` is signed multiply
+
+```div``` results in an integer, and works by dividing a 128-bit dividend by a 64-bit divisor
+
+- When doing ```div reg```, this happens behind the scenes: ```rax = rdx:rax / reg``` and then ```rdx = remainder``` ; note that rdx:rax means that rdx will be the upper 64-bits and rax will be the lower 64-bits of the 128-bit dividend
+
+- Modulo is done by looking at ```rax``` after, since it holds the remainder
+
+Registers in x86_64 are 64 bits in size, ```eax``` accesses lower 32 bits of ```rax```, ```ax``` accesses lower 16 bits, ```al``` accesses lower 8 bits, ```ah``` is upper 8 bits of the ```ax``` register 
+
+If you do ```x % y```, and 'y' is a power of 2 (2^n), the result will be in the lower 'n' bits of 'x' <-- much more efficient than using ```div``` for modulo
+
+```shl reg1, reg2``` shifts reg1 left by the amount in reg2, ```shr reg1, reg2``` works similarly but to the right
+
+- reg2 can be replaced by a constant, but note that it will be in bits
+
+
+
+
+
 
 
