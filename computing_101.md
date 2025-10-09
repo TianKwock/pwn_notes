@@ -48,5 +48,11 @@ Offset example: ```mov rax, [rdi+1]```
 
 ```write``` first parameter is file descriptor in ```rdi```, second is memory address in ```rsi```, third is number of characters to write in ```rdx``` 
 
+```read``` syscall number is 0
+
+```read``` parameters are same as ```write```'s parameters, but will read the specified number of bytes into memory starting from the provided address
+
+### Assembly Crash Course 
+
 
 
