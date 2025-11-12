@@ -78,6 +78,30 @@ If you do ```x % y```, and 'y' is a power of 2 (2^n), the result will be in the 
 
 Declaring operand size example: ```add qword ptr [0x404000], 0x1337```
 
+Offsets example: if [0x1337] = 0x00000000deadbeef, then [0x1337+1] = 0xbe
+
+Stacks are LIFO, and ```push``` will take the value in a register and push it onto the top of the stack, while ```pop``` will take the value from the top of the stack and put it into a register 
+
+```rsp```, the stack pointer, always stores the memory address of the top of the stack
+
+There are 2 major ways to manipulate control flow: jumps and calls
+
+There are 2 types of jumps: unconditional and conditional
+
+- Unconditional jumps always trigger
+
+For all jumps, there are 3 types of jumps: Relative jumps (jumps + or - the next instruction), Absolute jumps (jump to a specific address), and Indirect jumps (jump to the memory address specified in a register)
+
+To perform an absolute jump, load the target address into a general-purpose register, reg, and then do ```jmp reg```
+
+To repeat an instruction, you can use ```.rept [number of times you want to repeat]```, then your instruction(s), then ```.endr```
+
+The Zero Flag (ZF) is set to 1 when a ```cmp``` is equal, and 0 otherwise
+
+- This is because ```cmp``` works by subtracting the arguments 
+
+An indirect jump is similar to a switch statement
+
 
 
 
