@@ -21,6 +21,8 @@ If the first character in the brackets is a '!' or '^' (in newer versions of bas
 
 'grep -v' is inverse grep
 
+```sed "s/oldword/newword/g"``` substitutes the old word for the new word searching globally 
+
 'tee' duplicates data flowing through pipes to any number of files 
 
 ``` <(command) ``` is process substitution that runs the command and hooks up its output to a temp file. This is called a named pipe. 
